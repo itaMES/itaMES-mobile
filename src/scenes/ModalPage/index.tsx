@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { View, Text } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import GenericModal from '@components/GenericModal';
+import GenericModal from '@/components/GenericModal';
 import styles from './styles';
 
 const ModalPage: FC = () => {

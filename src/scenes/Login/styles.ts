@@ -8,23 +8,11 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.primary,
   },
   content: {
+    alignItems: 'center',
     flex: 1,
     flexGrow: 1,
+    justifyContent: 'center',
     padding: 15,
-  },
-  mainText: {
-    color: palette.CLOUDS,
-    fontFamily: fonts.regular,
-    paddingVertical: 10,
-  },
-  languangeContainer: {
-    flexDirection: 'row',
-  },
-  button: {
-    margin: 8,
-  },
-  buttonText: {
-    fontFamily: fonts.regular,
   },
 });
 

@@ -4,10 +4,10 @@ import { View, ScrollView, Text, FlatList } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { useNavigation, StackActions } from '@react-navigation/native';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllFilmsRequest } from '@redux/actions';
-import { allFilms } from '@redux/ghibli/selectors';
-import NHCSafeAreaView from '@components/NHCSafeAreaView';
-import GenericHeader from '@components/GenericHeader';
+import { getAllFilmsRequest } from '@/redux/actions';
+import { allFilms } from '@/redux/ghibli/selectors';
+import NHCSafeAreaView from '@/components/NHCSafeAreaView';
+import GenericHeader from '@/components/GenericHeader';
 import styles from './styles';
 
 const OtherPage: FC = () => {

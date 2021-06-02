@@ -25,37 +25,7 @@
 
     "baseUrl": ".",
       "paths": {
-        "@*": ["src/*"],
-        "@assets/*": [
-          "src/assets/*"
-        ],
-        "@components/*": [
-          "src/components/*"
-        ],
-        "@i18n/*": [
-          "src/i18n/*"
-        ],
-        "@redux/*": [
-          "src/redux/*"
-        ],
-        "@routes/*": [
-          "src/routes/*"
-        ],
-        "@scenes/*": [
-          "src/scenes/*"
-        ],
-        "@services/*": [
-          "src/services/*"
-        ],
-        "@theme/*": [
-          "src/theme/*"
-        ],
-        "@utils/*": [
-          "src/utils/*"
-        ],
-        "@env": [
-          "src/env.js"
-        ]
+      "@/*": ["src/*"],
     }
   },
   "exclude": [

@@ -1,4 +1,4 @@
-import env from '@env';
+import env from '@/env';
 import withQuery from 'with-query';
 import { GetAllFilmsRequestPayload } from './types';
 

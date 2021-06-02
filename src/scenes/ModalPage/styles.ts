@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { palette } from '@theme/colors';
-import { fonts } from '@theme/fonts';
+import { palette } from '@/theme/colors';
+import { fonts } from '@/theme/fonts';
 
 const styles = StyleSheet.create({
   mainText: {
