@@ -133,25 +133,6 @@ _REMEMBER: the entry point file in the root of the project MUST be index.js_
 
 ---
 
-## Roadmap :running:
-
-✅ Initial Setup<br/>
-✅ Add Splashscreen (https://github.com/crazycodeboy/react-native-splash-screen)<br/>
-✅ Add Toolbox (https://github.com/panz3r/react-native-toolbox)<br/>
-✅ Create tree folders structure<br/>
-✅ Add `redux-toolkit`<br/>
-✅ Add `redux-persist` (https://github.com/rt2zz/redux-persist)<br/>
-✅ Add `React Native Debugger`<br/>
-✅ Add `redux-saga`<br/>
-✅ Add `i18next`<br/>
-✅ Add `react-navigation v5` ❤️<br/>
-❌ Removed `native-base` <br/>
-✅ Add new UI Design System (`UIKitten v5`)<br />
-✅ Add `Env`variables selection experimental way ⚗️⚗️⚗️<br />
-✅ Add Typescript (optional use. Read the DOC above)<br />
-✅ Add Travis<br />
-✅ Add DependaBot<br />
-
 ## License :scroll:
 
 Licensed under [Mozilla Public License Version 2.0](LICENSE)
