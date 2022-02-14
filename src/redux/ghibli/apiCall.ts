@@ -1,8 +1,8 @@
-import env from '@/env';
+import env from '@env';
 import withQuery from 'with-query';
 import { GetAllFilmsRequestPayload } from './types';
 
-export async function getAllFilms({ limit }: GetAllFilmsRequestPayload): Promise<any> {
+export async function getAllFilms({ limit }: GetAllFilmsRequestPayload): Promise<Response> {
   try {
     const url = withQuery(`${env.API_URL}/films`, {
       limit,
