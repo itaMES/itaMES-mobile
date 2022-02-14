@@ -1,8 +1,8 @@
-import { configureStore, getDefaultMiddleware } from '@/reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { persistStore, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';
-import { persistedRootReducer } from '@/redux/reducers';
-import rootSaga from '@/redux/rootSaga';
+import { persistedRootReducer } from '@redux/reducers';
+import rootSaga from '@redux/rootSaga';
 
 // Setup Middlewares
 const sagaMiddleware = createSagaMiddleware();

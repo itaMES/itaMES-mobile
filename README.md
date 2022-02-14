@@ -1,4 +1,7 @@
-# ita MES
+# ita MES <!-- omit in toc -->
+
+> A React Native boilerplate app to bootstrap your next app!
+
 # Table of Contents <!-- omit in toc -->
 
 - [Installation :inbox_tray:](#installation-inbox_tray)
@@ -21,7 +24,10 @@
 ## Installation :inbox_tray:
 
 ```bash
-> cd itames-mobile
+# Setup your project
+> npx degit IronTony/react-native-boilerplate-starter-app your-new-app
+
+> cd your-new-app
 
 # Install dependencies
 > yarn
@@ -130,6 +136,49 @@ To enable full Typescript checks, just open the `tsconfig.json` file and chage a
 ```
 
 _REMEMBER: the entry point file in the root of the project MUST be index.js_
+
+---
+
+## Roadmap :running:
+
+✅ Initial Setup<br/>
+✅ Add Splashscreen (https://github.com/crazycodeboy/react-native-splash-screen)<br/>
+✅ Add Toolbox (https://github.com/panz3r/react-native-toolbox)<br/>
+✅ Create tree folders structure<br/>
+✅ Add `redux-toolkit`<br/>
+✅ Add `redux-persist` (https://github.com/rt2zz/redux-persist)<br/>
+✅ Add `React Native Debugger`<br/>
+✅ Add `redux-saga`<br/>
+✅ Add `i18next`<br/>
+✅ Add `react-navigation v5` ❤️<br/>
+❌ Removed `native-base` <br/>
+✅ Add new UI Design System (`UIKitten v5`)<br />
+✅ Add `Env`variables selection experimental way ⚗️⚗️⚗️<br />
+✅ Add Typescript (optional use. Read the DOC above)<br />
+✅ Add Travis<br />
+✅ Add DependaBot<br />
+
+#### Other branches for other features
+
+🚧 GraphQL (Apollo client) <br/>
+🚧 Shared Elements animation
+
+---
+
+## Contributors :sparkles:
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 ---
 

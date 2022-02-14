@@ -1,15 +1,13 @@
 import { StyleSheet } from 'react-native';
-import { palette } from '@/theme/colors';
-import { fonts } from '@/theme/fonts';
-import theme from '@/theme';
+import { palette } from '@theme/colors';
+import { fonts } from '@theme/fonts';
+import theme from '@theme';
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors.primary,
   },
   content: {
-    flex: 1,
-    flexGrow: 1,
     padding: 15,
   },
   mainText: {

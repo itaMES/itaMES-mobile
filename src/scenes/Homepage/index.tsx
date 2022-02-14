@@ -3,9 +3,9 @@ import { View, ScrollView, Text } from 'react-native';
 import { Trans, useTranslation } from 'react-i18next';
 import { useNavigation } from '@react-navigation/native';
 import { Button, Icon } from '@ui-kitten/components';
-import EnvInfoView from '@/components/AppVersion';
-import NHCSafeAreaView from '@/components/NHCSafeAreaView';
-import GenericHeader from '@/components/GenericHeader';
+import EnvInfoView from '@components/AppVersion';
+import NHCSafeAreaView from '@components/NHCSafeAreaView';
+import GenericHeader from '@components/GenericHeader';
 import styles from './styles';
 
 const Home: FC = () => {
@@ -23,7 +23,7 @@ const Home: FC = () => {
 
   return (
     <NHCSafeAreaView>
-      {/* <GenericHeader BodyHeader={<Icon pack="FontAwesome5" name="react" style={styles.headerIconContent} />} /> */}
+      <GenericHeader BodyHeader={<Icon pack="FontAwesome5" name="react" style={styles.headerIconContent} />} />
 
       <ScrollView style={styles.container} contentContainerStyle={styles.content}>
         <Text style={styles.mainText}>{t('Homepage:welcome')}</Text>
@@ -59,7 +59,7 @@ const Home: FC = () => {
 
           <Button
             style={styles.navigationButtonBordered}
-            onPress={() => navigation.navigate('Modal')}
+            onPress={() => navigation.navigate('MyModal')}
             children={() => <Text style={styles.navigationButtonBorderedText}>{t('Homepage:openModal')}</Text>}
           />
         </View>
