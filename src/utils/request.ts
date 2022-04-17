@@ -1,5 +1,6 @@
 import { removeNullProperties } from '@utils/common';
 import axios, { AxiosRequestConfig } from 'axios';
+import AsyncStorage from '@react-native-community/async-storage';
 
 // eslint-disable-next-line no-shadow
 enum Method {
@@ -14,6 +15,13 @@ interface RequestConfig extends AxiosRequestConfig {
 }
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const request: any = async (url = '', method = Method.GET, data: object = {}, isUpload = false) => {
+  let token: string | null = null;
+  try {
+    token = await AsyncStorage.getItem('@token');
+    console.log('token', token);
+  } catch (e) {
+    // error reading value
+  }
   const options: RequestConfig = {
     method,
     mode: 'cors',
@@ -24,13 +32,12 @@ export const request: any = async (url = '', method = Method.GET, data: object =
     timeout: 2 * 60 * 1000, // 2'
     data: {},
   };
-  const token: string | null = null;
-  // if (isLoggedIn()) {
-  //   token = UserStorage.getToken();
-  //   options.headers.Authorization = `Bearer ${token}`;
-  // } else {
-  //   history.push('/user/login');
-  // }
+
+  if (token) {
+    options.headers.Authorization = `Bearer ${token}`;
+  } else {
+    // TODO: Show message and redirect to login page
+  }
 
   if (data && isUpload) {
     options.data = data;

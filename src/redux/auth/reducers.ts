@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { loginRequest, loginSuccess } from './actions';
+import { loginRequest, loginSuccess, logoutSuccess } from './actions';
 import { LoginData } from './types';
 
 export interface IAuthState {
@@ -20,6 +20,9 @@ export const authReducer = createReducer(initialState, {
   [loginSuccess.type]: (state, action) => {
     state.loading = false;
     state.user = action.payload;
+  },
+  [logoutSuccess.type]: (state, action) => {
+    state.user = {};
   },
   // [getAllFilmsFailed.type]: state => {
   //   state.loading = false;
