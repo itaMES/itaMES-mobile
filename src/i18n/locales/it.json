@@ -6,8 +6,8 @@
   "Header": {
     "back": "Indietro"
   },
-  "Homepage": {
-    "welcome": "Grazie per usare React Native Starter App\n😍 😘 🙏🏻",
+  "ExamplePage": {
+    "welcome": "ita Mes\n😍 😘 🙏🏻",
     "releasedWithLove": "Creato e rilasciato con ❤️ per voi",
     "goToAnotherPage": "Vai in un'altra pagina",
     "openModal": "Apri la modale"

@@ -11,6 +11,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { store, persistor } from '@redux/store';
 import { isMountedRef, navigationRef } from '@routes/navigationUtils';
 import Splashscreen from '@components/Splashscreen';
+import GlobalModal from '@components/GlobalModal';
 import { AntDesignIconsPack } from '@components/IconsAdapter/antdesign-icons';
 import { EntypoIconsPack } from '@components/IconsAdapter/entypo-icons';
 import { EvilIconsPack } from '@components/IconsAdapter/evil-icons';
@@ -69,6 +70,7 @@ const App: FC = () => {
                 <Layout style={[globalStyle.flex1, globalStyle.justifyCenter]}>
                   <RootStackScreen />
                 </Layout>
+                <GlobalModal />
               </NavigationContainer>
             </SafeAreaProvider>
           </PersistGate>

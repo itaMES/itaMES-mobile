@@ -1,8 +1,9 @@
 import { all, AllEffect, call, ForkEffect, spawn } from 'redux-saga/effects';
-import userSagas from '@redux/ghibli/sagas';
+import authSaga from '@redux/auth/sagas';
+import errorSaga from '@redux/error/sagas';
 
 function* rootSaga(): Generator<AllEffect<ForkEffect<void>>> {
-  const sagas = [userSagas];
+  const sagas = [...authSaga, ...errorSaga];
 
   yield all(
     sagas.map(saga =>

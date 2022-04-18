@@ -1,32 +1,63 @@
 import React, { FC } from 'react';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
-import Homepage from '@scenes/Homepage';
+import { useSelector } from 'react-redux';
+import isEmpty from 'lodash/isEmpty';
+import ExamplePage from '@scenes/ExamplePage';
+import LoginPage from '@scenes/LoginPage';
 import OtherPage from '@scenes/OtherPage';
 import ModalPage from '@scenes/ModalPage';
+import HomePage from '@scenes/HomePage';
 import { routeOverlayOption } from './routeOptions';
+import { userLogin } from '@redux/auth/selectors';
 
 const RootStack = createStackNavigator();
 const MainStack = createStackNavigator();
 
 export const MainStackScreen: FC = () => {
+  const currentUser = useSelector(userLogin);
+  const isLogin = !isEmpty(currentUser) && currentUser.token;
+  const initialRouteName = isLogin ? 'HomePage' : 'Login';
   return (
-    <MainStack.Navigator initialRouteName={'Home'}>
-      <MainStack.Screen
-        name="Home"
-        component={Homepage}
-        options={{
-          headerShown: false,
-          ...TransitionPresets.SlideFromRightIOS,
-        }}
-      />
-      <MainStack.Screen
-        name="OtherPage"
-        component={OtherPage}
-        options={{
-          headerShown: false,
-          ...TransitionPresets.SlideFromRightIOS,
-        }}
-      />
+    <MainStack.Navigator initialRouteName={initialRouteName}>
+      {!isLogin ? (
+        <>
+          <MainStack.Screen
+            name="Login"
+            component={LoginPage}
+            options={{
+              headerShown: false,
+              ...TransitionPresets.SlideFromRightIOS,
+            }}
+          />
+        </>
+      ) : (
+        <>
+          <MainStack.Screen
+            name="HomePage"
+            component={HomePage}
+            options={{
+              headerShown: false,
+              ...TransitionPresets.SlideFromRightIOS,
+            }}
+          />
+          <MainStack.Screen
+            name="ExamplePage"
+            component={ExamplePage}
+            options={{
+              headerShown: false,
+              ...TransitionPresets.SlideFromRightIOS,
+            }}
+          />
+          <MainStack.Screen
+            name="OtherPage"
+            component={OtherPage}
+            options={{
+              headerShown: false,
+              ...TransitionPresets.SlideFromRightIOS,
+            }}
+          />
+        </>
+      )}
     </MainStack.Navigator>
   );
 };
