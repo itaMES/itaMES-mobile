@@ -5,14 +5,16 @@ export type Response = {
     type: string;
     httpStatus: string;
   };
-  error?: {
-    code: string;
-    details: string;
-    field: string;
-    message: string;
-    resource: string;
-  };
+  error?: ErrorResponse;
   data?: object;
+};
+
+export type ErrorResponse = {
+  code: string;
+  details: string;
+  field: string;
+  message: string;
+  resource: string;
 };
 
 type HttpStatusCode = ['200', '401'];

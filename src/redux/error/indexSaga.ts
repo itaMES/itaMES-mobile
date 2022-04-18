@@ -1,12 +1,9 @@
 import { all, AllEffect, call, ForkEffect, spawn } from 'redux-saga/effects';
-import authSaga from '@redux/auth/sagas';
-import errorSaga from '@redux/error/sagas';
+import globalSaga from './sagas';
 
-function* rootSaga(): Generator<AllEffect<ForkEffect<void>>> {
-  const sagas = [...authSaga, ...errorSaga];
-
+function* globalModalRootSaga(): Generator<AllEffect<ForkEffect<void>>, void> {
   yield all(
-    sagas.map(saga =>
+    globalSaga.map(saga =>
       spawn(function* () {
         while (true) {
           try {
@@ -21,4 +18,4 @@ function* rootSaga(): Generator<AllEffect<ForkEffect<void>>> {
   );
 }
 
-export default rootSaga;
+export default globalModalRootSaga;

@@ -11,7 +11,7 @@ class AuthServices extends BaseService {
   logout = () => this.create({});
 }
 
-const loginServices = new AuthServices('security/login');
-const logoutServices = new AuthServices('security/logout');
+const loginServices = new AuthServices('/security/login');
+const logoutServices = new AuthServices('/security/logout');
 
 export { loginServices, logoutServices };

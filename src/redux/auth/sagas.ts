@@ -1,7 +1,8 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { call, CallEffect, ForkEffect, put, PutEffect, takeLatest } from 'redux-saga/effects';
 import AsyncStorage from '@react-native-community/async-storage';
-import { loginSuccess, loginRequest, logoutRequest, logoutSuccess } from './actions';
+import { loginSuccess, loginRequest, logoutRequest, logoutSuccess, loginFail } from './actions';
+import { addError } from '@redux/error/actions';
 import { loginServices, logoutServices } from '@redux/auth/services';
 import { LoginRequestPayload, ILoginSuccessResponse } from './types';
 
@@ -16,7 +17,7 @@ function* loginSaga({ payload }: PayloadAction<ILoginSuccessResponse>): Generato
 > {
   try {
     const response = yield call(loginServices.login, payload);
-    const { ok = false, data } = response as ILoginSuccessResponse;
+    const { ok = false, data, error } = response as ILoginSuccessResponse;
     if (ok) {
       const { token = '' } = data;
       try {
@@ -25,6 +26,9 @@ function* loginSaga({ payload }: PayloadAction<ILoginSuccessResponse>): Generato
         // saving error
       }
       yield put(loginSuccess(data));
+    } else {
+      yield put(loginFail());
+      yield put(addError(error));
     }
     // if (!isEmpty(filmsRes)) {
     //   yield put(getAllFilmsSuccess(filmsRes));

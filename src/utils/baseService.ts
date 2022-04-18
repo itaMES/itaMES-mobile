@@ -61,9 +61,8 @@ export class BaseService {
         return true;
       });
     }
-    url = `${url}${paths || this.pathname}`;
 
-    return url.toString();
+    return `${url}/${paths || this.pathname}`;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
