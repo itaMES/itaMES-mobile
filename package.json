@@ -47,7 +47,7 @@
     "@react-navigation/native": "6.0.8",
     "@react-navigation/stack": "6.1.1",
     "@reduxjs/toolkit": "^1.8.3",
-    "@ui-kitten/components": "^5.1.1",
+    "@ui-kitten/components": "^5.1.2",
     "axios": "^0.26.0",
     "crypto-js": "^4.1.1",
     "i18next": "21.6.11",
