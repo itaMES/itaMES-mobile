@@ -4,6 +4,5 @@ module.exports = {
   singleQuote: true,
   printWidth: 120,
   bracketSpacing: true,
-  arrowParens: 'avoid',
-  eol: "lf"
+  arrowParens: 'avoid'
 };
