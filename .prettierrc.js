@@ -4,5 +4,6 @@ module.exports = {
   singleQuote: true,
   printWidth: 120,
   bracketSpacing: true,
-  arrowParens: 'avoid'
+  arrowParens: 'avoid',
+  eol: "crlf"
 };
