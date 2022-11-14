@@ -47,6 +47,14 @@
     "@jridgewell/gen-mapping" "^0.3.2"
     jsesc "^2.5.1"
 
+"@babel/generator@^7.20.1":
+  version "7.20.4"
+  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.20.4.tgz#4d9f8f0c30be75fd90a0562099a26e5839602ab8"
+  dependencies:
+    "@babel/types" "^7.20.2"
+    "@jridgewell/gen-mapping" "^0.3.2"
+    jsesc "^2.5.1"
+
 "@babel/helper-annotate-as-pure@^7.16.7":
   version "7.16.7"
   resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.16.7.tgz#bb2339a7534a9c128e3102024c60760a3a7f3862"
@@ -97,6 +105,18 @@
     "@babel/helper-member-expression-to-functions" "^7.18.9"
     "@babel/helper-optimise-call-expression" "^7.18.6"
     "@babel/helper-replace-supers" "^7.18.9"
+    "@babel/helper-split-export-declaration" "^7.18.6"
+
+"@babel/helper-create-class-features-plugin@^7.20.2":
+  version "7.20.2"
+  resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.20.2.tgz#3c08a5b5417c7f07b5cf3dfb6dc79cbec682e8c2"
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.18.6"
+    "@babel/helper-environment-visitor" "^7.18.9"
+    "@babel/helper-function-name" "^7.19.0"
+    "@babel/helper-member-expression-to-functions" "^7.18.9"
+    "@babel/helper-optimise-call-expression" "^7.18.6"
+    "@babel/helper-replace-supers" "^7.19.1"
     "@babel/helper-split-export-declaration" "^7.18.6"
 
 "@babel/helper-create-regexp-features-plugin@^7.18.6":
@@ -160,6 +180,13 @@
   dependencies:
     "@babel/template" "^7.18.6"
     "@babel/types" "^7.18.9"
+
+"@babel/helper-function-name@^7.19.0":
+  version "7.19.0"
+  resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.19.0.tgz#941574ed5390682e872e52d3f38ce9d1bef4648c"
+  dependencies:
+    "@babel/template" "^7.18.10"
+    "@babel/types" "^7.19.0"
 
 "@babel/helper-get-function-arity@^7.16.7":
   version "7.16.7"
@@ -226,6 +253,10 @@
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.18.9.tgz#4b8aea3b069d8cb8a72cdfe28ddf5ceca695ef2f"
 
+"@babel/helper-plugin-utils@^7.19.0", "@babel/helper-plugin-utils@^7.20.2":
+  version "7.20.2"
+  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.20.2.tgz#d1b9000752b18d0877cff85a5c376ce5c3121629"
+
 "@babel/helper-remap-async-to-generator@^7.18.6", "@babel/helper-remap-async-to-generator@^7.18.9":
   version "7.18.9"
   resolved "https://registry.yarnpkg.com/@babel/helper-remap-async-to-generator/-/helper-remap-async-to-generator-7.18.9.tgz#997458a0e3357080e54e1d79ec347f8a8cd28519"
@@ -255,6 +286,16 @@
     "@babel/traverse" "^7.18.9"
     "@babel/types" "^7.18.9"
 
+"@babel/helper-replace-supers@^7.19.1":
+  version "7.19.1"
+  resolved "https://registry.yarnpkg.com/@babel/helper-replace-supers/-/helper-replace-supers-7.19.1.tgz#e1592a9b4b368aa6bdb8784a711e0bcbf0612b78"
+  dependencies:
+    "@babel/helper-environment-visitor" "^7.18.9"
+    "@babel/helper-member-expression-to-functions" "^7.18.9"
+    "@babel/helper-optimise-call-expression" "^7.18.6"
+    "@babel/traverse" "^7.19.1"
+    "@babel/types" "^7.19.0"
+
 "@babel/helper-simple-access@^7.18.6":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/helper-simple-access/-/helper-simple-access-7.18.6.tgz#d6d8f51f4ac2978068df934b569f08f29788c7ea"
@@ -283,9 +324,17 @@
   version "7.18.10"
   resolved "https://registry.yarnpkg.com/@babel/helper-string-parser/-/helper-string-parser-7.18.10.tgz#181f22d28ebe1b3857fa575f5c290b1aaf659b56"
 
+"@babel/helper-string-parser@^7.19.4":
+  version "7.19.4"
+  resolved "https://registry.yarnpkg.com/@babel/helper-string-parser/-/helper-string-parser-7.19.4.tgz#38d3acb654b4701a9b77fb0615a96f775c3a9e63"
+
 "@babel/helper-validator-identifier@^7.18.6":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.18.6.tgz#9c97e30d31b2b8c72a1d08984f2ca9b574d7a076"
+
+"@babel/helper-validator-identifier@^7.19.1":
+  version "7.19.1"
+  resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.19.1.tgz#7eea834cf32901ffdc1a7ee555e2f9c27e249ca2"
 
 "@babel/helper-validator-option@^7.16.7", "@babel/helper-validator-option@^7.18.6":
   version "7.18.6"
@@ -319,6 +368,10 @@
 "@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.1.6", "@babel/parser@^7.14.0", "@babel/parser@^7.14.7", "@babel/parser@^7.18.10", "@babel/parser@^7.18.11", "@babel/parser@^7.7.0":
   version "7.18.11"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.18.11.tgz#68bb07ab3d380affa9a3f96728df07969645d2d9"
+
+"@babel/parser@^7.20.1":
+  version "7.20.3"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.20.3.tgz#5358cf62e380cf69efcb87a7bb922ff88bfac6e2"
 
 "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@^7.18.6":
   version "7.18.6"
@@ -581,6 +634,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.16.7"
 
+"@babel/plugin-syntax-typescript@^7.20.0":
+  version "7.20.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.20.0.tgz#4e9a0cfc769c85689b77a2e642d24e9f697fc8c7"
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.19.0"
+
 "@babel/plugin-transform-arrow-functions@^7.0.0", "@babel/plugin-transform-arrow-functions@^7.18.6":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.18.6.tgz#19063fcf8771ec7b31d742339dac62433d0611fe"
@@ -732,11 +791,11 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.6"
 
-"@babel/plugin-transform-object-assign@^7.0.0", "@babel/plugin-transform-object-assign@^7.10.4":
-  version "7.16.7"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-object-assign/-/plugin-transform-object-assign-7.16.7.tgz#5fe08d63dccfeb6a33aa2638faf98e5c584100f8"
+"@babel/plugin-transform-object-assign@^7.0.0", "@babel/plugin-transform-object-assign@^7.16.7":
+  version "7.18.6"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-object-assign/-/plugin-transform-object-assign-7.18.6.tgz#7830b4b6f83e1374a5afb9f6111bcfaea872cdd2"
   dependencies:
-    "@babel/helper-plugin-utils" "^7.16.7"
+    "@babel/helper-plugin-utils" "^7.18.6"
 
 "@babel/plugin-transform-object-super@^7.0.0", "@babel/plugin-transform-object-super@^7.18.6":
   version "7.18.6"
@@ -840,7 +899,15 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.9"
 
-"@babel/plugin-transform-typescript@^7.16.7", "@babel/plugin-transform-typescript@^7.5.0":
+"@babel/plugin-transform-typescript@^7.18.6":
+  version "7.20.2"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.20.2.tgz#91515527b376fc122ba83b13d70b01af8fe98f3f"
+  dependencies:
+    "@babel/helper-create-class-features-plugin" "^7.20.2"
+    "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/plugin-syntax-typescript" "^7.20.0"
+
+"@babel/plugin-transform-typescript@^7.5.0":
   version "7.16.8"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.16.8.tgz#591ce9b6b83504903fa9dd3652c357c2ba7a1ee0"
   dependencies:
@@ -959,13 +1026,13 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/preset-typescript@^7.1.0":
-  version "7.16.7"
-  resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.16.7.tgz#ab114d68bb2020afc069cd51b37ff98a046a70b9"
+"@babel/preset-typescript@^7.1.0", "@babel/preset-typescript@^7.16.7":
+  version "7.18.6"
+  resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.18.6.tgz#ce64be3e63eddc44240c6358daefac17b3186399"
   dependencies:
-    "@babel/helper-plugin-utils" "^7.16.7"
-    "@babel/helper-validator-option" "^7.16.7"
-    "@babel/plugin-transform-typescript" "^7.16.7"
+    "@babel/helper-plugin-utils" "^7.18.6"
+    "@babel/helper-validator-option" "^7.18.6"
+    "@babel/plugin-transform-typescript" "^7.18.6"
 
 "@babel/register@^7.0.0":
   version "7.17.0"
@@ -1006,12 +1073,35 @@
     debug "^4.1.0"
     globals "^11.1.0"
 
+"@babel/traverse@^7.19.1":
+  version "7.20.1"
+  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.20.1.tgz#9b15ccbf882f6d107eeeecf263fbcdd208777ec8"
+  dependencies:
+    "@babel/code-frame" "^7.18.6"
+    "@babel/generator" "^7.20.1"
+    "@babel/helper-environment-visitor" "^7.18.9"
+    "@babel/helper-function-name" "^7.19.0"
+    "@babel/helper-hoist-variables" "^7.18.6"
+    "@babel/helper-split-export-declaration" "^7.18.6"
+    "@babel/parser" "^7.20.1"
+    "@babel/types" "^7.20.0"
+    debug "^4.1.0"
+    globals "^11.1.0"
+
 "@babel/types@^7.0.0", "@babel/types@^7.16.7", "@babel/types@^7.18.10", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4", "@babel/types@^7.7.0":
   version "7.18.10"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.18.10.tgz#4908e81b6b339ca7c6b7a555a5fc29446f26dde6"
   dependencies:
     "@babel/helper-string-parser" "^7.18.10"
     "@babel/helper-validator-identifier" "^7.18.6"
+    to-fast-properties "^2.0.0"
+
+"@babel/types@^7.19.0", "@babel/types@^7.20.0", "@babel/types@^7.20.2":
+  version "7.20.2"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.20.2.tgz#67ac09266606190f496322dbaff360fdaa5e7842"
+  dependencies:
+    "@babel/helper-string-parser" "^7.19.4"
+    "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
 "@bcoe/v8-coverage@^0.2.3":
@@ -1586,32 +1676,45 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@react-native/polyfills/-/polyfills-2.0.0.tgz#4c40b74655c83982c8cf47530ee7dc13d957b6aa"
 
-"@react-navigation/core@^6.1.1":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-6.1.1.tgz#47b01d0263e413164431c886267a5139e093c706"
+"@react-navigation/core@^6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-6.4.0.tgz#c44d33a8d8ef010a102c7f831fc8add772678509"
   dependencies:
-    "@react-navigation/routers" "^6.1.0"
+    "@react-navigation/routers" "^6.1.3"
     escape-string-regexp "^4.0.0"
     nanoid "^3.1.23"
     query-string "^7.0.0"
     react-is "^16.13.0"
+    use-latest-callback "^0.1.5"
+
+"@react-navigation/drawer@^6.4.4":
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/@react-navigation/drawer/-/drawer-6.5.0.tgz#6f73a04deca2ce046626a60d9a59b11e8cc97167"
+  dependencies:
+    "@react-navigation/elements" "^1.3.6"
+    color "^4.2.3"
+    warn-once "^0.1.0"
 
 "@react-navigation/elements@^1.3.1":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-1.3.1.tgz#aacb08fe0ca4db50f0ed16b72906869ce770edf4"
 
-"@react-navigation/native@6.0.8":
-  version "6.0.8"
-  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-6.0.8.tgz#66f48ad2b3fb1acd08c8d935d9f342a3d77ee6cd"
+"@react-navigation/elements@^1.3.6":
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-1.3.6.tgz#fa700318528db93f05144b1be4b691b9c1dd1abe"
+
+"@react-navigation/native@6.0.13":
+  version "6.0.13"
+  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-6.0.13.tgz#ec504120e193ea6a7f24ffa765a1338be5a3160a"
   dependencies:
-    "@react-navigation/core" "^6.1.1"
+    "@react-navigation/core" "^6.4.0"
     escape-string-regexp "^4.0.0"
     fast-deep-equal "^3.1.3"
     nanoid "^3.1.23"
 
-"@react-navigation/routers@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@react-navigation/routers/-/routers-6.1.0.tgz#d5682be88f1eb7809527c48f9cd3dedf4f344e40"
+"@react-navigation/routers@^6.1.3":
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/@react-navigation/routers/-/routers-6.1.3.tgz#1df51959e9a67c44367462e8b929b7360a5d2555"
   dependencies:
     nanoid "^3.1.23"
 
@@ -2833,12 +2936,26 @@ color-string@^1.6.0:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
 
+color-string@^1.9.0:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.9.1.tgz#4467f9146f036f855b764dfb5bf8582bf342c7a4"
+  dependencies:
+    color-name "^1.0.0"
+    simple-swizzle "^0.2.2"
+
 color@^3.1.3:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/color/-/color-3.2.1.tgz#3544dc198caf4490c3ecc9a790b54fe9ff45e164"
   dependencies:
     color-convert "^1.9.3"
     color-string "^1.6.0"
+
+color@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/color/-/color-4.2.3.tgz#d781ecb5e57224ee43ea9627560107c0e0c6463a"
+  dependencies:
+    color-convert "^2.0.1"
+    color-string "^1.9.0"
 
 colorette@^1.0.7:
   version "1.4.0"
@@ -5951,10 +6068,6 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "^1.2.5"
 
-mockdate@^3.0.2:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/mockdate/-/mockdate-3.0.5.tgz#789be686deb3149e7df2b663d2bc4392bc3284fb"
-
 module-definition@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/module-definition/-/module-definition-3.3.1.tgz#fedef71667713e36988b93d0626a4fe7b35aebfc"
@@ -6728,9 +6841,9 @@ react-native-debugger-open@^0.3.25:
     minimist "^1.2.0"
     semver "^5.4.1"
 
-react-native-gesture-handler@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.2.0.tgz#a551f9ca33d8766d0a24268f49e0f1b05191b105"
+react-native-gesture-handler@^2.6.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.8.0.tgz#ef9857871c10663c95a51546225b6e00cd4740cf"
   dependencies:
     "@egjs/hammerjs" "^2.0.17"
     hoist-non-react-statics "^3.3.0"
@@ -6742,23 +6855,23 @@ react-native-localize@2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/react-native-localize/-/react-native-localize-2.2.2.tgz#a1c6369000c9dae6800eded8ddb1673bf090f84e"
 
-react-native-reanimated@2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.4.1.tgz#4e33876fba525ce60ac13ab3c81fc3a9f8b132fe"
+react-native-reanimated@2.12.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.12.0.tgz#5821eecfb1769b1617a67a2d4dec12fdeedb2b6e"
   dependencies:
-    "@babel/plugin-transform-object-assign" "^7.10.4"
+    "@babel/plugin-transform-object-assign" "^7.16.7"
+    "@babel/preset-typescript" "^7.16.7"
     "@types/invariant" "^2.2.35"
     invariant "^2.2.4"
     lodash.isequal "^4.5.0"
-    mockdate "^3.0.2"
-    react-native-screens "^3.4.0"
+    setimmediate "^1.0.5"
     string-hash-64 "^1.0.3"
 
 react-native-safe-area-context@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-4.3.1.tgz#5cf97b25b395e0d09bc1f828920cd7da0d792ade"
 
-react-native-screens@^3.11.1, react-native-screens@^3.4.0:
+react-native-screens@^3.11.1:
   version "3.11.1"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-3.11.1.tgz#9bca9968986ca9195cb1e7e6fca37543bde64ecb"
   dependencies:
@@ -7304,6 +7417,10 @@ set-value@^2.0.0, set-value@^2.0.1:
     is-extendable "^0.1.1"
     is-plain-object "^2.0.3"
     split-string "^3.0.1"
+
+setimmediate@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/setimmediate/-/setimmediate-1.0.5.tgz#290cbb232e306942d7d7ea9b83732ab7856f8285"
 
 setprototypeof@1.2.0:
   version "1.2.0"
@@ -8140,6 +8257,10 @@ uri-js@^4.2.2:
 urix@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
+
+use-latest-callback@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/use-latest-callback/-/use-latest-callback-0.1.5.tgz#a4a836c08fa72f6608730b5b8f4bbd9c57c04f51"
 
 use-subscription@^1.0.0:
   version "1.5.1"
