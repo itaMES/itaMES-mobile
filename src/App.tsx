@@ -65,7 +65,7 @@ const App: FC = () => {
           <PersistGate loading={<Splashscreen />} persistor={persistor}>
             <SafeAreaProvider>
               <NavigationContainer ref={navigationRef}>
-                <StatusBar barStyle="dark-content" backgroundColor={palette.WHITE} />
+                <StatusBar barStyle="light-content" backgroundColor={palette.NEUTRAL_LIGHT} />
 
                 <Layout style={[globalStyle.flex1, globalStyle.justifyCenter]}>
                   <RootStackScreen />

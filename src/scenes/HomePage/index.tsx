@@ -4,18 +4,19 @@ import { Button } from '@ui-kitten/components';
 import NHCSafeAreaView from '@components/NHCSafeAreaView';
 import { logoutRequest } from '@redux/actions';
 import AuthContainer from '@components/AuthContainer';
+import HomeIcon from './Component/HomeIcon';
+import { View } from 'react-native';
+import Menu from './Component/Menu';
+import { DrawerActions, useNavigation } from '@react-navigation/native';
 
 const Home: FC = () => {
-  const dispatch = useDispatch();
-
-  const logout = () => {
-    dispatch(logoutRequest());
-  };
+  const navigation = useNavigation();
 
   return (
     <NHCSafeAreaView>
       <AuthContainer>
-        <Button onPress={() => logout()}>Logout</Button>
+        <Menu />
+        <Button onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>open drawer</Button>
       </AuthContainer>
     </NHCSafeAreaView>
   );

@@ -1,66 +1,55 @@
 import React, { FC } from 'react';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { useSelector } from 'react-redux';
 import isEmpty from 'lodash/isEmpty';
-import ExamplePage from '@scenes/ExamplePage';
 import LoginPage from '@scenes/LoginPage';
-import OtherPage from '@scenes/OtherPage';
 import ModalPage from '@scenes/ModalPage';
-import HomePage from '@scenes/HomePage';
 import { routeOverlayOption } from './routeOptions';
 import { userLogin } from '@redux/auth/selectors';
+import { HomeNavigator } from './home.navigator';
+import { HomeDrawer } from '@scenes/HomePage/Component/Drawer';
+import HomePage from '@scenes/HomePage';
 
 const RootStack = createStackNavigator();
-const MainStack = createStackNavigator();
+const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 
 export const MainStackScreen: FC = () => {
   const currentUser = useSelector(userLogin);
   const isLogin = !isEmpty(currentUser) && currentUser.token;
   const initialRouteName = isLogin ? 'HomePage' : 'Login';
   return (
-    <MainStack.Navigator initialRouteName={initialRouteName}>
+    <Stack.Navigator initialRouteName={initialRouteName}>
       {!isLogin ? (
-        <>
-          <MainStack.Screen
-            name="Login"
-            component={LoginPage}
-            options={{
-              headerShown: false,
-              ...TransitionPresets.SlideFromRightIOS,
-            }}
-          />
-        </>
+        <Stack.Screen
+          name="Login"
+          component={LoginPage}
+          options={{
+            headerShown: false,
+            ...TransitionPresets.SlideFromRightIOS,
+          }}
+        />
       ) : (
-        <>
-          <MainStack.Screen
-            name="HomePage"
-            component={HomePage}
-            options={{
-              headerShown: false,
-              ...TransitionPresets.SlideFromRightIOS,
-            }}
-          />
-          <MainStack.Screen
-            name="ExamplePage"
-            component={ExamplePage}
-            options={{
-              headerShown: false,
-              ...TransitionPresets.SlideFromRightIOS,
-            }}
-          />
-          <MainStack.Screen
-            name="OtherPage"
-            component={OtherPage}
-            options={{
-              headerShown: false,
-              ...TransitionPresets.SlideFromRightIOS,
-            }}
-          />
-        </>
+        <Stack.Screen
+          name="Login"
+          component={MainNavigator}
+          options={{
+            headerShown: false,
+            ...TransitionPresets.SlideFromRightIOS,
+          }}
+        />
       )}
-    </MainStack.Navigator>
+    </Stack.Navigator>
   );
 };
+
+const MainNavigator = (): React.ReactElement => (
+  <Drawer.Navigator drawerContent={props => <HomeDrawer {...props} />}>
+    <Drawer.Screen name="Home" options={{ headerShown: false }} component={HomePage} />
+    {/* <Drawer.Screen name="Libraries" component={LibrariesScreen} /> */}
+  </Drawer.Navigator>
+);
 
 export const RootStackScreen: FC = () => {
   return (
