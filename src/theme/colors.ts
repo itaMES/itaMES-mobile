@@ -23,6 +23,7 @@ const palette = {
   BLACK: '#000',
   TRANSPARENT: '#00000000',
   GREY_SHADOW_7: 'rgba(216,216,216,0.7)',
+  NEUTRAL_LIGHT: '#FEFEFE',
 };
 
 export { palette };

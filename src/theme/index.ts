@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { palette } from '@/theme/colors';
+import { palette } from '@theme/colors';
 
 const theme = {
   spacing: {
@@ -10,7 +10,7 @@ const theme = {
   colors: {
     statusBarBackground: palette.CONCRETE,
     headerBackground: palette.WHITE,
-    mainBackground: palette.MIDNIGHT_BLUE,
+    mainBackground: palette.NEUTRAL_LIGHT,
     backButtonText: palette.BELIZE_HOLE,
     transparent: palette.TRANSPARENT,
     primary: palette.MIDNIGHT_BLUE,

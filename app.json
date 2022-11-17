@@ -3,15 +3,25 @@
   "displayName": "ita MES",
   "environments": {
     "development": {
-      "API_URL": "https://ghibliapi.herokuapp.com",
+      "API_URL": {
+        "core": "http://116.105.224.251:8080",
+        "product": "http://116.105.224.251:8081",
+        "warehouse": "http://116.105.224.251:8082",
+        "export": "http://116.105.224.251:8083"
+      },
       "ENV": "development"
     },
     "staging": {
-      "API_URL": "https://ghibliapi.herokuapp.com",
+      "API_URL": {
+        "core": "http://45.119.81.47:8090",
+        "product": "http://45.119.81.47:8091",
+        "warehouse": "http://45.119.81.47:8092",
+        "export": "http://45.119.81.47:8093"
+      },
       "ENV": "staging"
     },
     "production": {
-      "API_URL": "https://ghibliapi.herokuapp.com",
+      "API_URL": "http://116.105.224.251:8080",
       "ENV": "production"
     }
   }

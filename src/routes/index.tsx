@@ -1,103 +1,68 @@
 import React, { FC } from 'react';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
-import {
-  createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem,
-} from '@react-navigation/drawer';
-import Homepage from '@/scenes/Homepage';
-import OtherPage from '@/scenes/OtherPage';
-import ModalPage from '@/scenes/ModalPage';
-import LoginPage from '@/scenes/Login';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { useSelector } from 'react-redux';
+import isEmpty from 'lodash/isEmpty';
+import LoginPage from '@scenes/LoginPage';
+import ModalPage from '@scenes/ModalPage';
 import { routeOverlayOption } from './routeOptions';
-import { Alert } from 'react-native';
+import { userLogin } from '@redux/auth/selectors';
+import { HomeNavigator } from './home.navigator';
+import { HomeDrawer } from '@scenes/HomePage/Component/Drawer';
+import HomePage from '@scenes/HomePage';
 
 const RootStack = createStackNavigator();
-const MainStack = createStackNavigator();
+const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
-const CustomDrawerContent: FC = (props) => {
-  return (
-    <DrawerContentScrollView {...props}>
-      {/* <DrawerItemList {...props} /> */}
-      <DrawerItem
-        label="Close drawer"
-        onPress={() => props.navigation.closeDrawer()}
-      />
-      <DrawerItem
-        label="Toggle drawer"
-        onPress={() => props.navigation.toggleDrawer()}
-      />
-      <DrawerItem
-        label="Other Page"
-        onPress={() => props.navigation.navigate('OtherPage')}
-      />
-      <DrawerItem
-        label="Profile"
-        onPress={() => Alert.alert('Navigate to Profile')}
-      />
-    </DrawerContentScrollView>
-  );
-}
-
 export const MainStackScreen: FC = () => {
+  const currentUser = useSelector(userLogin);
+  const isLogin = !isEmpty(currentUser) && currentUser.token;
+  const initialRouteName = isLogin ? 'HomePage' : 'Login';
   return (
-    <MainStack.Navigator initialRouteName={'Login'}>
-      <MainStack.Screen
-        name="Home"
-        component={Homepage}
-        options={{
-          headerShown: false,
-          ...TransitionPresets.SlideFromRightIOS,
-        }}
-      />
-      <MainStack.Screen
-        name="Login"
-        component={LoginPage}
-        options={{
-          headerShown: false,
-          ...TransitionPresets.SlideFromRightIOS,
-        }}
-      />
-      <MainStack.Screen
-        name="OtherPage"
-        component={OtherPage}
-        options={{
-          headerShown: false,
-          ...TransitionPresets.SlideFromRightIOS,
-        }}
-      />
-    </MainStack.Navigator>
+    <Stack.Navigator initialRouteName={initialRouteName}>
+      {!isLogin ? (
+        <Stack.Screen
+          name="Login"
+          component={LoginPage}
+          options={{
+            headerShown: false,
+            ...TransitionPresets.SlideFromRightIOS,
+          }}
+        />
+      ) : (
+        <Stack.Screen
+          name="Login"
+          component={MainNavigator}
+          options={{
+            headerShown: false,
+            ...TransitionPresets.SlideFromRightIOS,
+          }}
+        />
+      )}
+    </Stack.Navigator>
   );
 };
 
-export const DrawerStackScreen: FC = () => {
+const MainNavigator = (): React.ReactElement => (
+  <Drawer.Navigator drawerContent={props => <HomeDrawer {...props} />}>
+    <Drawer.Screen name="Home" options={{ headerShown: false }} component={HomePage} />
+    {/* <Drawer.Screen name="Libraries" component={LibrariesScreen} /> */}
+  </Drawer.Navigator>
+);
+
+export const RootStackScreen: FC = () => {
   return (
-    <Drawer.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
-      <Drawer.Screen
+    <RootStack.Navigator screenOptions={{ presentation: 'modal', ...routeOverlayOption }}>
+      <RootStack.Screen
         name="Main"
         component={MainStackScreen}
         options={{
           headerShown: false,
-        }} />
-    </Drawer.Navigator>
-  );
-}
-
-export const RootStackScreen: FC = () => {
-  return (
-    <RootStack.Navigator mode="modal" screenOptions={routeOverlayOption}>
-      <RootStack.Screen
-        name="Drawer"
-        component={DrawerStackScreen}
-        options={{
-          headerShown: false,
-          ...TransitionPresets.ModalPresentationIOS,
         }}
       />
       <RootStack.Screen
-        name="Modal"
+        name="MyModal"
         component={ModalPage}
         options={{
           headerShown: false,
