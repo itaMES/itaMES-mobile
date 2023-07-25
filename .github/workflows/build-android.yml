@@ -2,7 +2,7 @@ name: 'Build Android app'
 
 on:
   push:
-    branches: [docker-build]
+    branches: [build]
   watch:
     types: [started]
     # can add push and pull_request here
